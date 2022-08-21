@@ -4,8 +4,9 @@ is not in Cache, CPU needs to move the data from main storage to Cache. If, the 
 capacity of cache is full, then it must remove a data from Cache and replace it with new data.
 E.g. If the capacity of the Cache is 3, Cache=>[20, , 10], CPU needs 10 and 10 is in the Cache, we say
 this is Cache hit. Then, when CPU needs 21, but it is not in the Cache, we say this is Cache Miss. 
-Now the Cache=> [20, 21, 10].  
-But this algorithm  is not efficient, as if you need to find 31, you have to move one of the element out from the Cache.
+Now the Cache=> [20, 21, 10].
+20 21 10 20 21 1 21 21 20 4 5 6 7 10 10 10 10 10 10 10 10  
+But this algorithm is not efficient, as if you need to find 31, you have to move one of the element out from the Cache.
 Now the Cache=> [20, 21, 31].
 Let say, Now CPU needs to find 10, then we have one more Cache Miss. LRU Cache, is an algorithm moving out the element base on the times of usage,
 the less it got visited, the higher chances got moving out. However, LRU Cache is not that efficient when facing the situation i just wrote that above.
