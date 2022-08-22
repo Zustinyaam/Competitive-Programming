@@ -12,7 +12,7 @@ struct node{
 }a[1000500];
 
 bool cmp(node a, node b){
-    return a.s < b.s;
+    return a.s > b.s;
 }
 
 priority_queue<ll, vector<ll>, greater<ll> > q;
